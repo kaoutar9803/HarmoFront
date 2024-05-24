@@ -1,0 +1,111 @@
+/* Slider container */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.caption-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42%; /* Adapté à la taille du slider */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+  }
+  .slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 42% !important;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+  }
+  .banner-caption-h1, .banner-caption-p {
+    margin-bottom: 15px;
+  }
+  
+  .thm-btn {
+    background-color: #056738;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block; /* Ajustement pour aligner correctement le bouton */
+    transition: background-color 0.3s;
+  }
+  
+  .thm-btn:hover {
+    background-color: #369636;
+  }
+  
+/* Each slide */
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100vh;
+    min-height: 1px;
+}
+
+/* Image styling */
+.slick-slide img {
+    display: block;
+    width: 100%;
+    height: auto; /* Adjust height automatically to keep aspect ratio */
+}
+
+/* Current active slide */
+.slick-slide.slick-current,
+.slick-slide.slick-active {
+    display: block;
+}
+
+/* Caption styling */
+.caption {
+    position: absolute;
+    bottom: 20px; /* Distance from bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the caption */
+    color: #fff; /* Text color */
+    font-size: 20px; /* Text size */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px; /* Padding around text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+    max-width: 90%; /* Maximum width of the caption */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ensures the text does not overflow */
+}
+
+/* Adjust the slide to cover the full area */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Ensures the slider fits the parent container */
+.slick-track {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+}
+
+/* Optional: Animations for sliding */
+.slick-track {
+    transition: all 0.5s ease; /* Smooth transition for sliding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 16px; /* Smaller text on smaller screens */
+        padding: 8px 16px;
+    }
+}
